@@ -9,8 +9,4 @@
   tasks:
     - name: reading value from prompt
       ansible.builtin.debug:
-        msg: value of  VALUE1 is{{VALUE1}}
-
-    - name: reading value from 12
-      ansible.builtin.debug:
-        msg: value of  VALUE1 is{{VALUE1}}
+        msg: value of  VALUE1 is{{VALUE1}} and VALUE2 {{VALUE2}}
