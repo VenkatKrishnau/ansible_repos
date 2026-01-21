@@ -16,3 +16,21 @@
   - name: using the varibles 
     ansible.builtin.debug: 
       msg: " value1 is {{value1}} second value is {{value2}} third value is {{value3}}"
+
+
+- name: Prompt the values from user input
+  hosts: localhost
+  vars_prompt:
+  - name: USERNAME
+    prompt: Please enter your username
+    private: false
+    name: PASSWORD
+    prompt: Please eneter password
+    private: true
+
+  tasks:
+  - name: reading the value from the vars_prompt
+    ansible.builtin.debug:
+      msg: the value of {{USERNAME}} and the value of {{PASSWORD}}
+
+
