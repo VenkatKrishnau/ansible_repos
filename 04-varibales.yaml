@@ -4,7 +4,13 @@
   - name: VALUE1
     prompt: enter value1
     private: false
+    name: VALUE2 
+    prompt: enter value2 
   tasks:
     - name: reading value from prompt
+      ansible.builtin.debug:
+        msg: value of  VALUE1 is{{VALUE1}}
+
+    - name: reading value from 12
       ansible.builtin.debug:
         msg: value of  VALUE1 is{{VALUE1}}
