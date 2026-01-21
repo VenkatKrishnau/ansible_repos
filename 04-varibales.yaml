@@ -11,5 +11,5 @@
   tasks:
     - name: reading value from prompt
       ansible.builtin.debug:
-        msg: value of VALUE1 is {{VALUE1}} and VALUE2 is {{VALUE2}}
+        msg: value of is {{VALUE1}} and is {{VALUE2}}
 
