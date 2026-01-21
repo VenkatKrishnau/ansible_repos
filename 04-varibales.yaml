@@ -1,0 +1,12 @@
+- name: Learning variables with prompt
+  hosts: localhosts
+  vars_prompt:
+    - name: VALUE1
+      prompt: enter value1
+      name: VALUE2
+      prompt: enter value2
+
+  tasks:
+    - name: reading value from prompt
+      ansible.builtin.debug:
+        msg: value of VALUE1 is {{VALUE1}} and VALUE2 is {{VALUE2}}
