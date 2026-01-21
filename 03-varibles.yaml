@@ -9,9 +9,10 @@
 - name: Declaring the variable and using 
   hosts: localhost 
   vars:
-    my_name: venkat
-
+    value1: venkat
+    value2: 123
+    value3: 234
   tasks:
   - name: using the varibles 
     ansible.builtin.debug: 
-      msg: " {{my_name}}"
+      msg: " value1 is {{my_name}} second value is {{value2}} third value is {{value3}}"
