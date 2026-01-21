@@ -1,14 +1,15 @@
 - name: Learning variables with prompt
   hosts: localhost
   vars_prompt:
-    - name: VALUE1
-      prompt: enter value1
-      private: false
-      name: VALUE2
-      prompt: enter value2
-      private: false
+  - name: VALUE1
+    prompt: enter value1
+    private: false
+    name: VALUE2
+    prompt: enter value2
+    private: false
 
   tasks:
     - name: reading value from prompt
       ansible.builtin.debug:
         msg: value of VALUE1 is {{VALUE1}} and VALUE2 is {{VALUE2}}
+
