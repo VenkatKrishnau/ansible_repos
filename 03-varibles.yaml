@@ -1,0 +1,9 @@
+- name: Declaring the variable and using 
+  hosts: localhost 
+  vars:
+    my_name: venkat
+
+  tasks:
+  - name: using the varibles 
+    ansible.builtin.debug: 
+    msg: {{my_name}} 
