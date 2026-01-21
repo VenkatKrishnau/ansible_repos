@@ -1,10 +1,12 @@
 - name: Learning variables with prompt
-  hosts: localhosts
+  hosts: localhost
   vars_prompt:
     - name: VALUE1
       prompt: enter value1
+      private: false
       name: VALUE2
       prompt: enter value2
+      private: false
 
   tasks:
     - name: reading value from prompt
