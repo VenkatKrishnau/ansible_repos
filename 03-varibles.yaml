@@ -15,4 +15,4 @@
   tasks:
   - name: using the varibles 
     ansible.builtin.debug: 
-      msg: " value1 is {{my_name}} second value is {{value2}} third value is {{value3}}"
+      msg: " value1 is {{value1}} second value is {{value2}} third value is {{value3}}"
