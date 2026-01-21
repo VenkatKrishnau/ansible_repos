@@ -1,3 +1,11 @@
+- name: PLAY 1 
+  hosts: localhost 
+  tasks:
+  - name: this PLAY1 task 
+    ansible.builtin.debug:
+      msg: This is Venkat's PB1
+
+
 - name: Declaring the variable and using 
   hosts: localhost 
   vars:
@@ -6,4 +14,4 @@
   tasks:
   - name: using the varibles 
     ansible.builtin.debug: 
-      msg: " {{my_name}}" 
+      msg: " {{my_name}}"
