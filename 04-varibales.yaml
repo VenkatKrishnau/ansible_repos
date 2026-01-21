@@ -4,8 +4,10 @@
   - name: VALUE1
     prompt: enter value1
     private: false
-    name: VALUE2 
+  - name: VALUE2 
     prompt: enter value2 
+    private: false
+    
   tasks:
     - name: reading value from prompt
       ansible.builtin.debug:
