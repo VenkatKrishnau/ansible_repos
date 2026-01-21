@@ -7,4 +7,4 @@
   tasks:
     - name: reading value from prompt
       ansible.builtin.debug:
-        msg: value of is {{VALUE1}}
+        msg: value of  VALUE1 is{{VALUE1}}
