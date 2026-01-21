@@ -7,8 +7,11 @@
   - name: VALUE2 
     prompt: enter value2 
     private: false
-    
+
   tasks:
     - name: reading value from prompt
       ansible.builtin.debug:
-        msg: value of  VALUE1 is{{VALUE1}} and VALUE2 {{VALUE2}}
+        msg: value of  VALUE1 is {{VALUE1}}
+    - name: reading value from prompt1
+      ansible.builtin.debug:
+        msg: value of VALUE2 {{VALUE2}}
