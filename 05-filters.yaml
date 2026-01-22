@@ -18,3 +18,12 @@
         msg: print {{greeting}}  convert into upper {{greeting | upper}}
 
 
+- name: Handling String manupulation in lower case
+  hosts: localhost
+  vars: 
+    greeting: HELLO VENKAT GOOD MORNING
+  
+  tasks:
+    - name: convert the string into lower case
+      ansible.builtin.debug:
+        msg: print {{greeting}}  convert into lower {{greeting | lower}}
