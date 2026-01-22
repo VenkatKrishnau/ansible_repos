@@ -6,6 +6,7 @@
     - name: install packages in node
       ansible.builtin.dnf:
         msg:  "{{ item }}"
+        state: latest
       loop:
       - mysql
       - nginx
