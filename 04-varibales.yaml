@@ -26,3 +26,5 @@
     - name: print values of the variables
       ansible.builtin.debug:
         msg: print the value1 is {{value1}}
+        when value1 | int > 0
+        
