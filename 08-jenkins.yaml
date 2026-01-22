@@ -6,7 +6,9 @@
       ansible.builtin.dnf:
         name: java-17-openjdk-devel  # Installs the JDK and development tools
         state: present
-      # Alternative using the 'yum' module, which is often compatible
-      # ansible.builtin.yum:
-      #   name: java-17-openjdk-devel
-      #   state: present
+    
+    - name: ensure the java installed
+      ansible.builtin.debug: 
+        msg: "The installed Java version is: {{ java_version_raw.stdout }}"
+      when: java_version_raw.rc == 0
+     
