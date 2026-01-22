@@ -4,7 +4,7 @@
   tasks:
     - name: work on loop
       ansible.builtin.debug:
-        msg: {{ item }}
+        msg: " {{ item }} "
       loop:
         - one:
         - two:
