@@ -5,7 +5,7 @@
   tasks:
     - name: install packages in node
       ansible.builtin.dnf:
-        msg "{{ item }}"
+        msg:  "{{ item }}"
       loop:
       - mysql
       - nginx
