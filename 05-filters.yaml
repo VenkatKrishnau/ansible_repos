@@ -5,3 +5,16 @@
     - name: print default value
       ansible.builtin.debug:
         msg: print {{course | default('Ansible')}}
+
+
+- name: Handling String manupulation
+  hosts: localhost
+  vars: 
+    greeting: Hello Venkat Good morning
+  
+  tasks:
+    - name: convert the string into upper case
+      ansible.builtin.debug:
+        msg: print {{greeting}}  convert into upper {{greeting | upper}}
+
+
