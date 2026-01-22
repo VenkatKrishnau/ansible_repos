@@ -39,7 +39,7 @@
   tasks:
     - name: print numbers 
       ansible.builtin.debug:
-        msg: from the list {{ numbers }}
+        msg: "from the list {{ numbers }}"
 
     - name: print unique numbers removing dublicates
       ansible.builtin.debug:
