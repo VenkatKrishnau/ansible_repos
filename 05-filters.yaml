@@ -43,6 +43,6 @@
 
     - name: print unique numbers removing dublicates
       ansible.builtin.debug:
-        msg: {{ numbers | unique }}
+        msg: "{{ numbers | unique }}"
 
   
