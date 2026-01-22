@@ -55,3 +55,19 @@
     - name: print Min and Max numbers 
       ansible.builtin.debug:
         msg: "from the list : min number is {{ numbers | min }}  and max num is {{ numbers | max}} "
+
+
+
+- name: Converting DICT int LIST 
+  hosts: localhost
+  vars:
+    mydict: 
+      name: 'Venkat'
+      DOB:  '01-12-2000'
+      city: 'BNG'
+      PIN:  '332223'
+
+  tasks: 
+    - name: convert DICT into LIST
+      ansible.builtin.debug:
+        msg: print the list {{ mydict | dict2items }}
