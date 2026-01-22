@@ -33,7 +33,8 @@
 
 - name: Removing dublicates from the list
   hosts: localhost
-  numbers: [1,2,4,5,1,3,5,9,4,6]
+  vars:
+    numbers: [1,2,4,5,1,3,5,9,4,6]
 
   tasks:
     - name: remove dublicates
