@@ -46,3 +46,12 @@
         msg: "{{ numbers | unique }}"
 
   
+  name: Finding min and max numbers 
+  hosts: localhost
+  vars:
+    numbers: [1, 2, 4, 5, 1, 3, 5, 9, 4, 6]
+
+  tasks:
+    - name: print Min and Max numbers 
+      ansible.builtin.debug:
+        msg: "from the list : min number is {{ numbers | min }}  and max num is {{ numbers | max}} "
