@@ -27,3 +27,15 @@
     - name: convert the string into lower case
       ansible.builtin.debug:
         msg: print {{greeting}}  convert into lower {{greeting | lower}}
+
+
+
+
+- name: Removing dublicates from the list
+  hosts: localhost
+  numbers: [1,2,4,5,1,3,5,9,4,6]
+
+  tasks:
+    - name: remove dublicates
+      ansible.default.debug:
+        -msg: reove dbulicates {{numbers | unique}}
