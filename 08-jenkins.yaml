@@ -1,0 +1,12 @@
+- name: Install OpenJDK 17 on RHEL 9
+  hosts: all
+  become: true  # This allows the task to run with sudo privileges
+  tasks:
+    - name: Ensure OpenJDK 17 is installed
+      ansible.builtin.dnf:
+        name: java-17-openjdk-devel  # Installs the JDK and development tools
+        state: present
+      # Alternative using the 'yum' module, which is often compatible
+      # ansible.builtin.yum:
+      #   name: java-17-openjdk-devel
+      #   state: present
