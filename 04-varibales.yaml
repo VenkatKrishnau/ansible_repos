@@ -12,6 +12,17 @@
     - name: reading value from prompt
       ansible.builtin.debug:
         msg: value of  VALUE1 is {{VALUE1}}
+        when: 
     - name: reading value from prompt1
       ansible.builtin.debug:
         msg: value of VALUE2 {{VALUE2}}
+
+- name: Testing variables
+  hosts: localhost
+  vars:
+    value1: hello
+    value2: world
+  tasks:
+    - name: print values of the variables
+      ansible.builtin.debug:
+        msg: print the value1 is {{value1}}
