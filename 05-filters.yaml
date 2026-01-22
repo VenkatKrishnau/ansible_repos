@@ -3,5 +3,5 @@
   
   tasks:
     - name: print default value
-      ansible.default.debug:
+      ansible.builtin.debug
         msg: print {{course}}
