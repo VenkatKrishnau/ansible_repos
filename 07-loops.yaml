@@ -8,6 +8,6 @@
         msg:  "{{ item }}"
         state: "{{ item.state }}"
       loop:
-      - {name: 'mysql', state: 'latest'}
+      - {name: 'mysql-server', state: 'latest'}
       - {name: 'nginx', state: 'absent'}
       - {name: 'postfix', state: 'absent'}
