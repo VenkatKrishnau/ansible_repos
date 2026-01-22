@@ -4,7 +4,7 @@
 
   tasks:
     - name: install packages in node
-      ansible.builtin.dnf:
+      yum: 
         name:  "{{ item }}"
         state: "{{ item.state }}"
       loop:
