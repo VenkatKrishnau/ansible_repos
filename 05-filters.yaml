@@ -39,4 +39,4 @@
   tasks:
     - name: remove dublicates
       ansible.builtin.debug:
-        msg: reove dbulicates {{numbers | unique}}
+        msg: from the list {{ numbers }}remove dbulicates {{ numbers | unique }}
