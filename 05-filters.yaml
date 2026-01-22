@@ -68,6 +68,10 @@
       PIN:  '332223'
 
   tasks: 
+    - name: print the DICT 
+      ansible.builtin.debug:
+        msg: print the DICT {{ mydict  }}
+
     - name: convert DICT into LIST
       ansible.builtin.debug:
         msg: print the list {{ mydict | dict2items }}
