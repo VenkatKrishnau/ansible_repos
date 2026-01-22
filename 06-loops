@@ -1,0 +1,11 @@
+- name: Learn loop 
+  hosts: localhost
+  
+  tasks:
+    - name: work on loop
+      ansible.builtin.debug:
+        msg: {{ item }}
+      loop:
+        - one:
+        - two:
+        - three:
